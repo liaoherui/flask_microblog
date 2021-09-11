@@ -1,12 +1,15 @@
 import os
 
-basedir = os.path.abspath(os.path.dirname(__file__))
+#basedir = os.path.abspath(os.path.dirname(__file__))
 
 from dotenv import load_dotenv
 basedir = os.path.abspath(os.path.dirname(__file__))
 load_dotenv(os.path.join(basedir, 'microblog.env'))
 
-class Config:
+#from app.models import User,Post
+#from config import Config
+
+class Config(object):
 	SECRET_KEY=os.environ.get("SECRET_KEY") or "you will never guess"
 
 	SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URI') or 'sqlite:///' + os.path.join(basedir, 'app.db')
@@ -25,3 +28,4 @@ class Config:
 
 	APPID = os.environ.get('APPID')
 	BD_TRANSLATOR_KEY = os.environ.get('BD_TRANSLATOR_KEY')
+
