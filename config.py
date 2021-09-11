@@ -22,3 +22,6 @@ class Config:
 	MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
 
 	LANGUAGES=['en','zh']
+
+	APPID = os.environ.get('APPID')
+	BD_TRANSLATOR_KEY = os.environ.get('BD_TRANSLATOR_KEY')
